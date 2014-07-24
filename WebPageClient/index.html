@@ -19,6 +19,19 @@
             $.connection.hub.start().done(function () {  
             	// 此处为调用服务器MyMessageHub类的Send方法
             	chat.server.helloWorld();
+				$("#sub").click(function(){
+					sendMsg();
+				});
+				$("#msg").keydown(function(event){
+  					if(event.keyCode == 13){
+						sendMsg();
+					}	
+				});
+				
+				function sendMsg(){
+					chat.server.sendMessage($("#msg").val());
+					$("#msg").val("");
+				}
             });
 	});
 </script>
@@ -26,5 +39,7 @@
 
 <body>
 	<ul id="result"></ul>
+    <input type="text" id="msg" />
+    <input type="button" id="sub" value="提交" />
 </body>
 </html>

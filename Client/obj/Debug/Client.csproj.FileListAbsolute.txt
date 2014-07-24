@@ -8,3 +8,6 @@ C:\Users\Bin\Desktop\SignalR_Self_Host\Client\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Bin\Desktop\SignalR_Self_Host\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
 C:\Users\Bin\Desktop\SignalR_Self_Host\Client\obj\Debug\Client.exe
 C:\Users\Bin\Desktop\SignalR_Self_Host\Client\obj\Debug\Client.pdb
+E:\库\文档\个人学习研究\SignalR_Self_Host\Client\bin\Debug\Client.exe.config
+E:\库\文档\个人学习研究\SignalR_Self_Host\Client\obj\Debug\Client.exe
+E:\库\文档\个人学习研究\SignalR_Self_Host\Client\obj\Debug\Client.pdb
