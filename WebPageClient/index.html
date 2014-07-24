@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery-2.1.1.js"></script>
+<script type="text/javascript" src="jquery.signalR-2.1.0.js"></script>
+<script type="text/javascript" src="http://localhost:8080/signalr/hubs"></script>
+<script type="text/javascript">
+	$(function(){
+		// 定义引用服务器端Hub的对象 myMessageHub为服务器端Hub类 客户端需采用Camel命名法
+            $.connection.hub.url = 'http://localhost:8080/signalr';
+			var chat = $.connection.myServiceHub;
+
+			chat.client.pushMessage=function(sender,msg){
+				$("#result").append("<li>"+sender+":"+msg+"</li>");
+			}
+            // 开启与服务器的连接 连接成功后绑定事件
+            $.connection.hub.start().done(function () {  
+            	// 此处为调用服务器MyMessageHub类的Send方法
+            	chat.server.helloWorld();
+            });
+	});
+</script>
+</head>
+
+<body>
+	<ul id="result"></ul>
+</body>
+</html>
