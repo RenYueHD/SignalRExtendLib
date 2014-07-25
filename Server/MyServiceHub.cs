@@ -1,15 +1,16 @@
 ﻿using Microsoft.AspNet.SignalR;
+using SignalRExtendLib;
+using SignalRExtendLib.Filter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace Server
 {
-    /// <summary>
-    /// 注意Hub类必须是public
-    /// </summary>
+    [SessionEnable]
     public class MyServiceHub : Hub
     {
         public void HelloWorld()

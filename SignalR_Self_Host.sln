@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{0DFD2245-E898-4EDE-B8EE-3C6FF8A791B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRExtendLib", "SignalRExtendLib\SignalRExtendLib.csproj", "{13FCF29F-B917-49DC-A38D-8533DDCDB2CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0DFD2245-E898-4EDE-B8EE-3C6FF8A791B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DFD2245-E898-4EDE-B8EE-3C6FF8A791B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DFD2245-E898-4EDE-B8EE-3C6FF8A791B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13FCF29F-B917-49DC-A38D-8533DDCDB2CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13FCF29F-B917-49DC-A38D-8533DDCDB2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13FCF29F-B917-49DC-A38D-8533DDCDB2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13FCF29F-B917-49DC-A38D-8533DDCDB2CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

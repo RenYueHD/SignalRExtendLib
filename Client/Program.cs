@@ -36,7 +36,7 @@ namespace Client
                 serviceHub.Invoke("HelloWorld").Wait();
                 while (true)
                 {
-                    Console.WriteLine("请选择:\n1.发送消息\n2.发送测试对象\n0.退出");
+                    Console.WriteLine("请选择:\n1.发送消息\n2.发送测试对象\n3.获取SessionID\n0.退出");
                     string key = Console.ReadLine();
                     if (key == "1")
                     {

@@ -15,6 +15,7 @@
 			chat.client.pushMessage=function(sender,msg){
 				$("#result").append("<li>"+sender+":"+msg+"</li>");
 			}
+	
             // 开启与服务器的连接 连接成功后绑定事件
             $.connection.hub.start().done(function () {  
             	// 此处为调用服务器MyMessageHub类的Send方法
@@ -32,6 +33,7 @@
 					chat.server.sendMessage($("#msg").val());
 					$("#msg").val("");
 				}
+
             });
 	});
 </script>
