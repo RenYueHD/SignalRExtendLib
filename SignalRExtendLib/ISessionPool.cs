@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.SignalR.Hubs;
+using SignalRExtendLib.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,29 +10,29 @@ namespace SignalRExtendLib
 {
     /// <summary>
     /// Session存储池接口
-    /// 此接口的实现类必须实现对Session对象的存储等操作
+    /// 此接口的实现类必须实现服务器端对Session对象的存取等操作
     /// </summary>
     public interface ISessionPool
     {
         /// <summary>
-        /// 通过请求上下文从SessionPool获取请求对应的Session
+        /// 通过SessionID从SessionPool获取请求对应的Session
         /// </summary>
-        /// <param name="context">请求上下文</param>
+        /// <param name="sessionID">SessionID</param>
         /// <returns></returns>
-        Session Take(HubCallerContext context);
+        Session Take(string sessionID);
 
         /// <summary>
-        /// 更新请求上下文对应的Session至SessionPool
+        /// 更新SessionID对应的Session至SessionPool
         /// </summary>
-        /// <param name="context">请求上下文</param>
-        /// <param name="session">Session信息</param>
-        void Update(HubCallerContext context,Session session);
+        /// <param name="sessionID">SessionID</param>
+        /// <param name="session">新的Session信息</param>
+        void Update(string sessionID, Session session);
 
         /// <summary>
-        /// 为请求上下文初始化对应的Session并写入SessionPool
+        /// 创建一个新的Session并添加至SessionPool
         /// </summary>
-        /// <param name="context">请求上下文</param>
-        void Init(HubCallerContext context);
+        /// <returns>创建的SessionID</returns>
+        string Create();
 
         /// <summary>
         /// 清除过期Session

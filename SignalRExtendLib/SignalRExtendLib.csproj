@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Exceptions\GetSessionFaildException.cs" />
     <Compile Include="Filter\SessionEnableAttribute.cs" />
+    <Compile Include="Interface\ICookieDistrinctRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerContext.cs" />
     <Compile Include="Session.cs" />

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.SignalR.Hubs;
+using SignalRExtendLib.Exceptions;
 using SignalRExtendLib.SessionPoolImpl;
 using System;
 using System.Collections.Generic;
@@ -24,11 +25,18 @@ namespace SignalRExtendLib
         /// <summary>
         /// 通过请求上下文获取请求对应的Session
         /// </summary>
-        /// <param name="context"></param>
+        /// <param name="context">请求上下文</param>
         /// <returns></returns>
         public static Session Session(HubCallerContext context)
         {
-            return SessionPool.Take(context);
+            if (!context.RequestCookies.ContainsKey("ASP.NET_SignalRExtendLib_SessionKey"))
+            {
+                throw new GetSessionFaildException("无法获取Session或该Hub位添加SessionEnableAttribute特性");
+            }
+            else
+            {
+                return SessionPool.Take(context.RequestCookies["ASP.NET_SignalRExtendLib_SessionKey"].Value);
+            }
         }
     }
 }

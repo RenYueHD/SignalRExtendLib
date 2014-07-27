@@ -19,15 +19,15 @@ namespace SignalRExtendLib
 
         internal ISessionPool SessionPool { get; set; }
 
-        public HubCallerContext Context { get; set; }
+        public string SessionID { get; set; }
 
         /// <summary>
-        /// 通过请求上下文构造Session对象
+        /// 构造新的Session对象
         /// </summary>
-        /// <param name="clientId"></param>
-        public Session(HubCallerContext context)
+        /// <param name="sessionID"></param>
+        public Session(string sessionID)
         {
-            this.Context = context;
+            this.SessionID = sessionID;
             dic = new Dictionary<string, object>();
             LastActive = DateTime.Now;
         }
@@ -60,7 +60,7 @@ namespace SignalRExtendLib
                 }
                 dic.Add(key, value);
 
-                SessionPool.Update(Context,this);
+                SessionPool.Update(SessionID, this);
             }
         }
 
