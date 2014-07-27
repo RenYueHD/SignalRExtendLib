@@ -5,5 +5,4 @@ SignalR_Self_Host
 
 SignalRExtendLib
 =================
-对现有SignalR的扩展,引入了Session概念,可在同一个连接内实现数据共享
-目前还无法跨页面实现
+对现有SignalR的扩展,引入了Session概念,已实现跨页面Session
