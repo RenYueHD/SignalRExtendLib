@@ -48,3 +48,4 @@ E:\库\文档\个人学习研究\SignalR_Self_Host\Server\obj\Debug\Server.cspro
 E:\库\文档\个人学习研究\SignalR_Self_Host\Server\bin\Debug\SignalRExtendLib.dll
 E:\库\文档\个人学习研究\SignalR_Self_Host\Server\bin\Debug\SignalRExtendLib.pdb
 E:\库\文档\个人学习研究\SignalR_Self_Host\Server\bin\Debug\System.Web.Cors.dll
+E:\库\文档\个人学习研究\SignalR_Self_Host\Server\obj\Debug\Server.csproj.Server.exe.config

@@ -48,6 +48,10 @@ namespace Client
                         var obj = new { Name = "小明", Age = 18 };
                         serviceHub.Invoke("SendObject",obj).Wait();
                     }
+                    else if (key == "3")
+                    {
+                        serviceHub.Invoke("GetSessionId").Wait();
+                    }
                     else if (key == "0")
                     {
                         connection.Stop();

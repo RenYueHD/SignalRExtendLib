@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.SignalR;
+using Microsoft.AspNet.SignalR.Hubs;
 using SignalRExtendLib.Exceptions;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace SignalRExtendLib.SessionPoolImpl
     {
         private Dictionary<string, Session> dic = new Dictionary<string, Session>();
 
-        public Session Take(Microsoft.AspNet.SignalR.Hubs.HubCallerContext context)
+        public Session Take(HubCallerContext context)
         {
             if (!context.RequestCookies.ContainsKey("ASP.NET_Signal_SessionKey"))
             {
@@ -44,8 +45,9 @@ namespace SignalRExtendLib.SessionPoolImpl
         public void Init(Microsoft.AspNet.SignalR.Hubs.HubCallerContext context)
         {
             Cookie ck = new Cookie("ASP.NET_Signal_SessionKey", Guid.NewGuid().ToString());
-
+            
 #warning Cookie在刷新页面后失效
+       
             context.RequestCookies.Add("ASP.NET_Signal_SessionKey", ck);
 
             Session session = new Session(context);

@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 
 namespace Server
 {
@@ -28,6 +27,11 @@ namespace Server
         {
             Console.WriteLine("客户端发送了一个对象,类型为"+obj.GetType().Name.ToString());
             Clients.Caller.pushMessage("管理员", "您向我发送了一个类型为"+obj.GetType().Name.ToString()+"的对象");
+        }
+
+        public void GetSessionId()
+        {
+            Clients.Caller.pushMessage("SessionID",Context.RequestCookies["ASP.NET_Signal_SessionKey"].Value);
         }
     }
 }

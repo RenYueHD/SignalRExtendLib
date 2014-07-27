@@ -33,7 +33,10 @@
 					chat.server.sendMessage($("#msg").val());
 					$("#msg").val("");
 				}
-
+				
+				$("#cookie").click(function(){
+					$("#result").append("<li>"+ chat.server.getSessionId()+"</li>");
+				});
             });
 	});
 </script>
@@ -43,5 +46,6 @@
 	<ul id="result"></ul>
     <input type="text" id="msg" />
     <input type="button" id="sub" value="提交" />
+    <input type="button" id="cookie" value="查看SessionID" />
 </body>
 </html>
