@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -14,6 +14,18 @@
 
 			chat.client.pushMessage=function(sender,msg){
 				$("#result").append("<li>"+sender+":"+msg+"</li>");
+			}
+			
+			chat.client.addCookie=function(name,value,expire){
+				var str = name + "=" + escape(value); 
+				if(expire != null ){//为0时不设定过期时间，浏览器关闭时cookie自动消失 
+					var date = new Date(); 
+					date.setTime(expire); 
+					str += "; expires=" + date.toGMTString(); 
+				} 
+				str += ";path=/";
+				document.cookie = str; 
+				$("#result").append("<li>添加Cookie{name:"+name+",value:"+value+",exp:"+expire+"</li>");
 			}
 	
             // 开启与服务器的连接 连接成功后绑定事件
@@ -35,7 +47,7 @@
 				}
 				
 				$("#cookie").click(function(){
-					$("#result").append("<li>"+ chat.server.getSessionId()+"</li>");
+					chat.server.getSessionId();
 				});
             });
 	});
