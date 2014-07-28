@@ -47,7 +47,9 @@
 				}
 				
 				$("#cookie").click(function(){
-					chat.server.getSessionId();
+				    chat.server.getSessionId().done(function (id) {
+				        $("#result").append("<li>SessionID:"+id+"</li>");
+				    });
 				});
             });
 	});

@@ -2,6 +2,7 @@
 using Microsoft.AspNet.SignalR.Hubs;
 using SignalRExtendLib.Exceptions;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -12,13 +13,21 @@ namespace SignalRExtendLib.SessionPoolImpl
 {
     class DefaultSessionPoolImplement : ISessionPool
     {
-        private Dictionary<string, Session> dic = new Dictionary<string, Session>();
+        Hashtable dic = Hashtable.Synchronized(new System.Collections.Hashtable());
+        private TimeSpan timeOut = new TimeSpan(0, 30, 0);
 
         public Session Take(string sessionId)
         {
             if (dic.ContainsKey(sessionId))
             {
-                return dic[sessionId];
+                Session s= dic[sessionId] as Session;
+                if (DateTime.Now - s.LastActive >= timeOut)
+                {
+                    s = new Session(sessionId);
+                    s.SessionPool = this;
+                    dic[sessionId] = s;
+                }
+                return s;
             }
             else
             {
@@ -32,6 +41,8 @@ namespace SignalRExtendLib.SessionPoolImpl
 
         public string Create()
         {
+            ClearOutOfDate();
+
             string sessionId = Guid.NewGuid().ToString();   
             Session session = new Session(sessionId);
             session.SessionPool = this;
@@ -44,26 +55,37 @@ namespace SignalRExtendLib.SessionPoolImpl
             //此方法在本实现类中无需手动实现
         }
 
-        public void ClearOutOfDate()
+        private void ClearOutOfDate()
         {
-            List<string> keys = dic.Where(p => (DateTime.Now - p.Value.LastActive).TotalMinutes >= 30).Select(p => p.Key).ToList();
-#if DEBUG
-            int count = 0;
-#endif
-            lock (this)
+            List<string> keys = new List<string>();
+            foreach (var k in dic.Keys)
             {
-                keys.ForEach(p =>
+                if (DateTime.Now - (dic[k] as Session).LastActive >= timeOut)
                 {
-                    dic.Remove(p);
-#if DEBUG
-                    count++;
-#endif
-                });
+                    keys.Add(k.ToString());
+                }
             }
 
+            keys.ForEach(p =>
+            {
+                dic.Remove(p);
+            });
 #if DEBUG
-            Debug.WriteLine("已清除"+count+"条过期Session");
+            Debug.WriteLine("SessionPool已自动清除"+keys.Count+"条过期Session");
 #endif
+        }
+
+
+        public TimeSpan TimeOut
+        {
+            set
+            {
+                this.timeOut = value;
+            }
+            get
+            {
+                return this.timeOut;
+            }
         }
     }
 }

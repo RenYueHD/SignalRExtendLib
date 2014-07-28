@@ -50,7 +50,7 @@ namespace Client
                     }
                     else if (key == "3")
                     {
-                        serviceHub.Invoke("GetSessionId").Wait();
+                        Console.WriteLine("SessionID:" + serviceHub.Invoke<string>("GetSessionId").Result);
                     }
                     else if (key == "0")
                     {

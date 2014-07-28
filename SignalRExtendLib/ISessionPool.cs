@@ -11,6 +11,7 @@ namespace SignalRExtendLib
     /// <summary>
     /// Session存储池接口
     /// 此接口的实现类必须实现服务器端对Session对象的存取等操作
+    /// 此接口的实现类应具有自我清理过期Session的能力
     /// </summary>
     public interface ISessionPool
     {
@@ -35,8 +36,8 @@ namespace SignalRExtendLib
         string Create();
 
         /// <summary>
-        /// 清除过期Session
+        /// Session过期时间
         /// </summary>
-        void ClearOutOfDate();
+        TimeSpan TimeOut { get; set; }
     }
 }

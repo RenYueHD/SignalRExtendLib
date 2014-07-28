@@ -1,4 +1,5 @@
 ﻿using Microsoft.Owin.Hosting;
+using SignalRExtendLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace Server
 
             using (WebApp.Start<Startup>("http://localhost:8080/"))
             {
+                ServerContext.Init();
                 Console.WriteLine("SignalR服务器已在 http://localhost:8080 启动");
                 Console.ReadLine();
             }

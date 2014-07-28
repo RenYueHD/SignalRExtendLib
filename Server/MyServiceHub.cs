@@ -14,7 +14,6 @@ namespace Server
     public class MyServiceHub : Hub, ICookieDistrinctRequest
     {
 
-
         public void HelloWorld()
         {
             Console.WriteLine("ID为" + base.Context.ConnectionId + "的用户进入聊天室");
@@ -32,9 +31,9 @@ namespace Server
             Clients.Caller.pushMessage("管理员", "您向我发送了一个类型为" + obj.GetType().Name.ToString() + "的对象");
         }
 
-        public void GetSessionId()
+        public string GetSessionId()
         {
-            Clients.Caller.pushMessage("SessionID", Context.RequestCookies["ASP.NET_SignalRExtendLib_SessionKey"].Value);
+            return Context.RequestCookies["ASP.NET_SignalRExtendLib_SessionKey"].Value;
         }
 
         public void AppendCookie(string ckName, string ckValue, DateTime? expire = null)
