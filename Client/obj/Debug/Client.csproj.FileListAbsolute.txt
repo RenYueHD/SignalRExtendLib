@@ -27,4 +27,3 @@ E:\库\文档\个人学习研究\SignalRExtendLib\Client\bin\Debug\Microsoft.Asp
 E:\库\文档\个人学习研究\SignalRExtendLib\Client\bin\Debug\Newtonsoft.Json.xml
 E:\库\文档\个人学习研究\SignalRExtendLib\Client\obj\Debug\Client.exe
 E:\库\文档\个人学习研究\SignalRExtendLib\Client\obj\Debug\Client.pdb
-E:\库\文档\个人学习研究\SignalRExtendLib\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache

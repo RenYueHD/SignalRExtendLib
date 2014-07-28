@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Server
 {
     [SessionEnable]
-    public class MyServiceHub : Hub, ICookieDistrinctRequest
+    public class MyServiceHub : Hub,ICookieDistrinctRequest
     {
 
         public void HelloWorld()
@@ -24,8 +24,8 @@ namespace Server
             }
             else
             {
-                Console.WriteLine("Name为" +name+ "的用户回到聊天室");
-                Clients.All.pushMessage("管理员", "欢迎" + name+ "回到聊天室");
+                Console.WriteLine("Name为" + name + "的用户回到聊天室");
+                Clients.All.pushMessage("管理员", "欢迎" + name + "回到聊天室");
             }
         }
 

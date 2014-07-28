@@ -14,7 +14,7 @@ namespace SignalRExtendLib.SessionPoolImpl
     class DefaultSessionPoolImplement : ISessionPool
     {
         Hashtable dic = Hashtable.Synchronized(new System.Collections.Hashtable());
-        private TimeSpan timeOut = new TimeSpan(0, 30, 0);
+        private TimeSpan timeOut;
 
         public Session Take(string sessionId)
         {
