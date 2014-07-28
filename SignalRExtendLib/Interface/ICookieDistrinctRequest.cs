@@ -8,7 +8,7 @@ namespace SignalRExtendLib.Interface
 {
     /// <summary>
     /// 客户端Cookie持久化接口
-    /// 若您的Hub需要启用jsonp模式下的Session,或者你的Session必须跨越多个页面,则您的Hub必须正确实现该接口
+    /// 若你的Hub正确实现该接口,则Session将能跨越多个页面/连接
     /// </summary>
     public interface ICookieDistrinctRequest
     {

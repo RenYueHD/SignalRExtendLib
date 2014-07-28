@@ -19,7 +19,6 @@ namespace Server
 
             using (WebApp.Start<Startup>("http://localhost:8080/"))
             {
-                ServerContext.Init();
                 Console.WriteLine("SignalR服务器已在 http://localhost:8080 启动");
                 Console.ReadLine();
             }

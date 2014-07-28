@@ -50,8 +50,6 @@ E:\库\文档\个人学习研究\SignalR_Self_Host\Server\bin\Debug\SignalRExten
 E:\库\文档\个人学习研究\SignalR_Self_Host\Server\bin\Debug\System.Web.Cors.dll
 E:\库\文档\个人学习研究\SignalR_Self_Host\Server\obj\Debug\Server.csproj.Server.exe.config
 E:\库\文档\个人学习研究\SignalRExtendLib\Server\bin\Debug\Server.exe.config
-E:\库\文档\个人学习研究\SignalRExtendLib\Server\obj\Debug\Server.exe
-E:\库\文档\个人学习研究\SignalRExtendLib\Server\obj\Debug\Server.pdb
 E:\库\文档\个人学习研究\SignalRExtendLib\Server\bin\Debug\Server.exe
 E:\库\文档\个人学习研究\SignalRExtendLib\Server\bin\Debug\Server.pdb
 E:\库\文档\个人学习研究\SignalRExtendLib\Server\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
@@ -75,4 +73,5 @@ E:\库\文档\个人学习研究\SignalRExtendLib\Server\bin\Debug\Microsoft.Owi
 E:\库\文档\个人学习研究\SignalRExtendLib\Server\bin\Debug\Microsoft.Owin.Security.xml
 E:\库\文档\个人学习研究\SignalRExtendLib\Server\bin\Debug\Newtonsoft.Json.xml
 E:\库\文档\个人学习研究\SignalRExtendLib\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
-E:\库\文档\个人学习研究\SignalRExtendLib\Server\obj\Debug\Server.csproj.Server.exe.config
+E:\库\文档\个人学习研究\SignalRExtendLib\Server\obj\Debug\Server.exe
+E:\库\文档\个人学习研究\SignalRExtendLib\Server\obj\Debug\Server.pdb

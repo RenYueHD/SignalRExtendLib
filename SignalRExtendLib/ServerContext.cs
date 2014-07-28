@@ -34,6 +34,11 @@ namespace SignalRExtendLib
             Debug.WriteLine("ServerContext初始化成功,Session超时时间:"+SessionPool.TimeOut.TotalMinutes+"分钟");
         }
 
+        static ServerContext()
+        {
+            Init();
+        }
+
         internal static ISessionPool SessionPool { get; set; }
 
         /// <summary>
