@@ -4,3 +4,8 @@ E:\库\文档\个人学习研究\SignalR_Self_Host\WebPage\bin\WebPage.pdb
 E:\库\文档\个人学习研究\SignalR_Self_Host\WebPage\obj\Debug\WebPage.dll
 E:\库\文档\个人学习研究\SignalR_Self_Host\WebPage\obj\Debug\WebPage.pdb
 E:\库\文档\个人学习研究\SignalR_Self_Host\WebPage\obj\Debug\WebPage.csprojResolveAssemblyReference.cache
+E:\库\文档\个人学习研究\SignalRExtendLib\WebPage\bin\WebPage.dll.config
+E:\库\文档\个人学习研究\SignalRExtendLib\WebPage\bin\WebPage.dll
+E:\库\文档\个人学习研究\SignalRExtendLib\WebPage\bin\WebPage.pdb
+E:\库\文档\个人学习研究\SignalRExtendLib\WebPage\obj\Debug\WebPage.dll
+E:\库\文档\个人学习研究\SignalRExtendLib\WebPage\obj\Debug\WebPage.pdb

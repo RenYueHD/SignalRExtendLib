@@ -25,7 +25,7 @@
 				} 
 				str += ";path=/";
 				document.cookie = str; 
-				$("#result").append("<li>添加Cookie{name:"+name+",value:"+value+",exp:"+expire+"</li>");
+				$("#result").append("<li>添加Cookie{name:"+name+",value:"+value+",exp:"+expire+"}</li>");
 			}
 	
             // 开启与服务器的连接 连接成功后绑定事件
@@ -51,6 +51,13 @@
 				        $("#result").append("<li>SessionID:"+id+"</li>");
 				    });
 				});
+
+				$("#setName").click(function () {
+				    chat.server.setName($("#name").val()).done(function () {
+				        $("#name").remove();
+				        $("#setName").remove();
+				    });
+				});
             });
 	});
 </script>
@@ -61,5 +68,7 @@
     <input type="text" id="msg" />
     <input type="button" id="sub" value="提交" />
     <input type="button" id="cookie" value="查看SessionID" />
+    <input type="text" id="name" />
+    <input type="button" id="setName" value="设置用户名" />
 </body>
 </html>

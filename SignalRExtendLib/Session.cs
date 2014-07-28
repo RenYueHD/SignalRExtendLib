@@ -19,7 +19,7 @@ namespace SignalRExtendLib
 
         internal ISessionPool SessionPool { get; set; }
 
-        public string SessionID { get; set; }
+        public string SessionID { get; private set; }
 
         /// <summary>
         /// 构造新的Session对象
@@ -58,8 +58,10 @@ namespace SignalRExtendLib
                 {
                     dic.Remove(key);
                 }
-                dic.Add(key, value);
-
+                if (value != null)
+                {
+                    dic.Add(key, value);
+                }
                 SessionPool.Update(SessionID, this);
             }
         }

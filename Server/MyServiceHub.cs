@@ -16,13 +16,29 @@ namespace Server
 
         public void HelloWorld()
         {
-            Console.WriteLine("ID为" + base.Context.ConnectionId + "的用户进入聊天室");
-            Clients.All.pushMessage("管理员", "欢迎ID为" + base.Context.ConnectionId + "的用户进入聊天室");
+            object name = ServerContext.Session(Context)["username"];
+            if (name == null)
+            {
+                Console.WriteLine("ID为" + base.Context.ConnectionId + "的用户进入聊天室");
+                Clients.All.pushMessage("管理员", "欢迎ID为" + base.Context.ConnectionId + "的用户进入聊天室");
+            }
+            else
+            {
+                Console.WriteLine("Name为" +name+ "的用户回到聊天室");
+                Clients.All.pushMessage("管理员", "欢迎" + name+ "回到聊天室");
+            }
+        }
+
+        public void SetName(string name)
+        {
+            ServerContext.Session(Context)["username"] = name;
         }
 
         public void SendMessage(string msg)
         {
-            Clients.All.pushMessage(Context.ConnectionId, msg);
+            object name = ServerContext.Session(Context)["username"];
+
+            Clients.All.pushMessage(name==null? Context.ConnectionId:name.ToString(), msg);
         }
 
         public void SendObject(dynamic obj)

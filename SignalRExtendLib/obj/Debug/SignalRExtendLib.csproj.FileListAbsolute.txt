@@ -11,3 +11,16 @@ E:\库\文档\个人学习研究\SignalR_Self_Host\SignalRExtendLib\bin\Debug\Mi
 E:\库\文档\个人学习研究\SignalR_Self_Host\SignalRExtendLib\bin\Debug\Newtonsoft.Json.xml
 E:\库\文档\个人学习研究\SignalR_Self_Host\SignalRExtendLib\obj\Debug\SignalRExtendLib.dll
 E:\库\文档\个人学习研究\SignalR_Self_Host\SignalRExtendLib\obj\Debug\SignalRExtendLib.pdb
+E:\库\文档\个人学习研究\SignalRExtendLib\SignalRExtendLib\bin\Debug\SignalRExtendLib.dll
+E:\库\文档\个人学习研究\SignalRExtendLib\SignalRExtendLib\bin\Debug\SignalRExtendLib.pdb
+E:\库\文档\个人学习研究\SignalRExtendLib\SignalRExtendLib\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+E:\库\文档\个人学习研究\SignalRExtendLib\SignalRExtendLib\bin\Debug\Microsoft.Owin.dll
+E:\库\文档\个人学习研究\SignalRExtendLib\SignalRExtendLib\bin\Debug\Microsoft.Owin.Security.dll
+E:\库\文档\个人学习研究\SignalRExtendLib\SignalRExtendLib\bin\Debug\Newtonsoft.Json.dll
+E:\库\文档\个人学习研究\SignalRExtendLib\SignalRExtendLib\bin\Debug\Owin.dll
+E:\库\文档\个人学习研究\SignalRExtendLib\SignalRExtendLib\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+E:\库\文档\个人学习研究\SignalRExtendLib\SignalRExtendLib\bin\Debug\Microsoft.Owin.xml
+E:\库\文档\个人学习研究\SignalRExtendLib\SignalRExtendLib\bin\Debug\Microsoft.Owin.Security.xml
+E:\库\文档\个人学习研究\SignalRExtendLib\SignalRExtendLib\bin\Debug\Newtonsoft.Json.xml
+E:\库\文档\个人学习研究\SignalRExtendLib\SignalRExtendLib\obj\Debug\SignalRExtendLib.dll
+E:\库\文档\个人学习研究\SignalRExtendLib\SignalRExtendLib\obj\Debug\SignalRExtendLib.pdb
