@@ -1,0 +1,1 @@
+{"name":"SignalRExtendLib","tagline":"","body":"SignalR_Self_Host\r\n=================\r\n一个SignalR的SelfHost小Demo\r\n包含了一个控制台的Server端,一个控制台的Client端和一个HTML的Client端\r\n\r\nSignalRExtendLib\r\n=================\r\n对现有SignalR的扩展,引入了Session概念,已实现跨页面Session\r\n","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}
